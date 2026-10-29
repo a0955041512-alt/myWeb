@@ -1,0 +1,55 @@
+name: 留下您的需求
+description: 填寫以下資訊，方便我們了解並回覆您的詢問。
+title: "[需求詢問]: "
+labels: ["requirement"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: 您的稱呼
+      placeholder: 請輸入您的姓名或稱呼
+    validations:
+      required: true
+
+  - type: input
+    id: phone
+    attributes:
+      label: 連絡電話
+      placeholder: 請輸入您的電話
+    validations:
+      required: false
+
+  - type: input
+    id: email
+    attributes:
+      label: 電子郵件
+      placeholder: e.g. name@example.com
+    validations:
+      required: true
+
+  - type: dropdown
+    id: service
+    attributes:
+      label: 想了解的服務
+      options:
+        - 網頁開發服務
+        - 諮詢與規劃
+        - 其他需求
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: 需求說明
+      placeholder: 請詳細描述您的需求內容...
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: 隱私與條款同意
+      options:
+        - label: 是否同意提供上述資料供本次諮詢聯繫使用
+          required: true
